@@ -11,6 +11,7 @@ A repertoire with zero chimeric sequences will typically have a fraction of arou
 
 Two example simulation samples are included in `examples/`, one with no chimeras, and one consisting entirely of chimeras.
 The former has a value for the fraction described above of 0.012 (1.2%), while the latter has 0.21 (21%).
+These samples correspond to the simulation plots in explanation-slides.pdf.
 
 Input yaml file should be a list of dicts, where each dict has a uid, naive V sequence, and mature V sequence.
 One way to make it would be something like the following python code:
