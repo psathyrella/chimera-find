@@ -68,4 +68,4 @@ def get_chimera_max_abs_diff(naive_v_seq, mature_v_seq, chunk_len=75, max_ambig_
             max_abs_diff = abs_diff
             imax = ipos
 
-    return imax, max_abs_diff  # <imax> is break point
+    return {'imax' : imax, 'max_abs_diff': max_abs_diff}  # <imax> is break point
