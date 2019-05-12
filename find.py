@@ -23,6 +23,6 @@ chinfo = {}
 for sfo in seqfos:
     chinfo[sfo['uid']] = chimerafcns.get_chimera_max_abs_diff(sfo['v_naive'], sfo['v_mature'], chunk_len=args.chunk_len)
 
-n_above_cutoff = len([_ for cfo in chinfo.values() if cfo['max_abs_diff'] > args.cutoff])
+n_above_cutoff = len([cfo for cfo in chinfo.values() if cfo['max_abs_diff'] > args.cutoff])
 chimeric_fraction = n_above_cutoff / float(len(chinfo))
 print '  %d / %d = %.3f above chimeric cutoff of %.2f' % (n_above_cutoff, len(chinfo), chimeric_fraction, args.cutoff)
