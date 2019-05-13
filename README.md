@@ -11,10 +11,11 @@ A repertoire with zero chimeric sequences will typically have a fraction of arou
 
 Two example simulation samples are included in `examples/`, one with no chimeras, and one consisting entirely of chimeras.
 The former has a value for the fraction described above of 0.012 (1.2%), while the latter has 0.21 (21%).
-These samples correspond to the simulation plots in intro-slides.pdf.
+If you set `--plotdir`, `find.py` reads these two samples and plots them in the same figures with your data sample.
+The extent to which your sample resembles one or the other gives you information about its chimera content.
 
-`./find.py examples/data.csv --plotdir examples/plots`
+`./find.py <your data csv file> --plotdir examples/plots`
 
 Input csv file should have columns uid, v_naive, and v_mature (see the `examples/`)
 
-![examples](examples/plots.html)
+![examples](examples/plots/mfreq-diff.svg)
