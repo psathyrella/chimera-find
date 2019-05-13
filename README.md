@@ -4,8 +4,9 @@ We find the position that maximizes this difference, and call that difference th
 See intro-slides.pdf for details.
 
 The script `find.py` calculates max-abs-diff for each input sequence.
+Input csv file should have columns uid, v_naive, and v_mature (see the `examples/`)
 The distribution of these values can be plotted and compared to the distributions in intro-slides.pdf.
-In addition, the script prints the fraction of input sequences that have "very high" max-abs-diff (above a threshold specified by --cutoff).
+In addition, the script prints the fraction of input sequences that have "very high" max-abs-diff (above a threshold specified by `--cutoff`).
 These are sequences that are quite likely to be chimeric, and thus the larger the fraction that this represents of your repertoire, the more likely it is that you have an atypically large numbers of chimeric sequences.
 A repertoire with zero chimeric sequences will typically have a fraction of around one percent.
 
@@ -16,6 +17,6 @@ The extent to which your sample resembles one or the other gives you information
 
 `./find.py <your data csv file> --plotdir examples/plots`
 
-Input csv file should have columns uid, v_naive, and v_mature (see the `examples/`)
+Examples of the plots that are generated can be found in `examples/plots/`, for instance:
 
 ![examples](examples/plots/mfreq-diff.svg)
