@@ -5,7 +5,7 @@ See intro-slides.pdf for details.
 
 The script `find.py` calculates max-abs-diff for each input sequence.
 The input csv file should have the columns uid, v_naive, and v_mature (see the `examples/`)
-The script prints the fraction of input sequences that have "very high" max-abs-diff (above a threshold specified by `--cutoff`).
+The script prints the fraction of input sequences that have "very high" max-abs-diff (above a threshold specified by `--cutoff`, but default 0.3).
 These are sequences that are quite likely to be chimeric, and thus the larger the fraction that this represents of your repertoire, the more likely it is that you have an atypically large numbers of chimeric sequences.
 A repertoire with zero chimeric sequences will typically have a fraction of around one percent.
 
